@@ -1,27 +1,50 @@
-body {
+* {
     padding: 0;
     margin: 0;
     color: #007185;
     font-size: 1em;
 }
-
+a {
+    text-decoration: none;
+}
 /*=============================
 HEADER
 =============================*/
 header {
+    display: block;
+}
+
+header .nav-container-top{
     display: flex;
+    margin: 20px 0;
 }
 
 header .logo h1{
     display: flex;
-    margin: 20px;
+    font-size: 2em;
 }
 
+.nav-right {
+    display: flex;
+}
 
 
 /*=============================
 MAIN
 =============================*/
+main section .container-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sub-container{
+    margin: 0 20px;
+}
+
+.product img {
+    width: 200px;
+}
+
 main section .container-background {
     background: rgba(0, 0, 0, 0.8);
     display: flex;

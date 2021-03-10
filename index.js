@@ -7,12 +7,28 @@ const Products = [{
     id: "camisa",
     photo: "./imagens/camisa.png",
     description: "Camisa maculina",
-    price: "R$50,00",
+    price: "R$250,00",
+},{
+    id: "camisa",
+    photo: "./imagens/camisa-2.jpg",
+    description: "Camisa maculina",
+    price: "R$150,00",
+},{
+    id: "camisa",
+    photo: "./imagens/camisa-3.png",
+    description: "Camisa maculina",
+    price: "R$40,00",
+},{
+    id: "caneca",
+    photo: "./imagens/caneca.png",
+    description: "Caneca dev",
+    price: "R$200,00",
+},{
+    id: "sapato",
+    photo: "./imagens/tenis.png",
+    description: "Tenis Nike",
+    price: "R$300,00",
 }]
-
-const tools = {
-    
-}
 
 const cep = {
     cepInput: document.querySelector("#input-cep"),
@@ -95,18 +111,20 @@ const DOM = {
         const {department ,photo, description, price} = Products[index];
 
         const HTML = `
-        <div class="photo">
-        <img src=${photo} alt="${department}">
-        </div>
-        <div class="description-photo">
-            <p>${description}</p>
-        </div>
-        <div class="share-photo">
-            <p>compartilhar</p>
-        </div>
-        <div class="value-photo">
-            <small>${price}</small>
-        </div>
+        <a href="#">
+            <div class="product">
+                <img src=${photo} alt="${department}">
+            </div>
+            <div class="description-product">
+                <p>${description}</p>
+            </div>
+            <div class="share-product">
+                <p>compartilhar</p>
+            </div>
+            <div class="value-product">
+                <small>${price}</small>
+            </div>
+        </a>
         `
         return HTML;
     },
@@ -129,8 +147,9 @@ const App = {
         console.log('Dev. luccass');
 
         //adicionando a foto
-        DOM.addINhtml(0)
-        DOM.addINhtml(1)
+        for (let i = 0; i < Products.length; i++) {
+            DOM.addINhtml(i);
+        }
     },
     reload() {
         console.log('reload');
@@ -142,3 +161,9 @@ App.init();
 
 
 //OJETIVOS
+// []efetuar a compra
+//      [] fazer login
+//      [] adicionar endereço
+//      [] forma de pagamento
+//      [] confira e finalize o seu pedido
+// [] buscar pelo produto
