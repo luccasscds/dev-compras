@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/search.css">
     <title>Dev.Compras</title>
 </head>
 <body>
@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div class="nav-center">
-                <input id="input-buscar-produto" type="text" onkeyup="productSearch.search(event)">
-                <input id="input-submit" type="submit" value='buscar' onclick="productSearch.search(event)">
+                <input id="input-buscar-produto" type="text" onkeyup="productSearch.inputSearch(event)">
+                <input id="input-submit" type="submit" value='buscar' onclick="productSearch.inputSearch(event)">
             </div>
             <div class="nav-right">
                 <div class="login">
@@ -43,11 +43,11 @@
                 </div>
             </div>
         </div>
+        
     </header>
     <main>
-
         <section>
-            <h1>momento para você pensar na vida</h1>
+            <div class="container-photos"></div>
         </section>
 
         <!-- modal part -->
@@ -75,9 +75,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- pesquisa não encontrada-->
+        <section class="pesquisa-nao-encontrada"></section>
         
     </main>
     <footer></footer>
-    <script src="./js/index.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>
