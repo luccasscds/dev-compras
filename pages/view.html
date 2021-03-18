@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/search.css">
     <title>Dev.Compras</title>
 </head>
+
 <body>
     <header>
         <div class="nav-container-top">
@@ -15,7 +17,7 @@
                     <h1>Dev.Compras</h1>
                 </div>
                 <div class="local">
-                    <a href="#" id="a-cep">    
+                    <a href="#" id="a-cep">
                         <span class="input-local">Selecione o endereço</span>
                     </a>
                 </div>
@@ -28,7 +30,7 @@
                 <div class="login">
                     <a href="#">login</a>
                 </div>
-    
+
                 <div class="carrinho-de-Compra">
                     <a href="./pages/carrinho-de-compra.html">carrinho de compras</a>
                 </div>
@@ -44,27 +46,10 @@
             </div>
         </div>
     </header>
-    <main>
 
+    <main>
         <section>
-            <div class="container-card">
-                <a href="./pages/notebook.html?pro=notebook gamer" class="">
-                    <div class="">
-                        <div class="">
-                            <div class="card-header">
-                                <h2 class="">Ofertas de hoje</h2>
-                            </div>
-                            <div class="card-body">
-                                <img id="img" src="./image/notebook-gamer.png" alt="notebook" width="200px" height="200px">
-                                <p id="price">R$7.368,32</p>
-                                <span class="">
-                                    pagamento à vista tem desconto de 30%
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <div class="container-photos"></div>
         </section>
 
         <!-- modal part -->
@@ -93,10 +78,15 @@
             </div>
         </section>
 
+        <!-- pesquisa não encontrada-->
+        <section class="pesquisa-nao-encontrada"></section>
+
     </main>
     <footer></footer>
-    <script src="./js/search.js"></script>
-    <script src="./js/cep.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="../js/banco-de-dados.js"></script>
+    <script src="../js/cep.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/view.js"></script>
 </body>
+
 </html>
