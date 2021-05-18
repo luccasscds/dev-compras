@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>avaliação</title>
+
+    <link rel="stylesheet" href="/styles/all.css">
+    <link rel="stylesheet" href="/styles/avaliacao.css">
+    
+    <script src="scripts/ferramentas/avaliacao.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="star" onclick="avaliacao.avaliar(event)">
+            <div><img id="star1" src="images/icons/star0.svg" alt="star" width="90px" data-star="s1"></div>
+            <div><img id="star2" src="images/icons/star0.svg" alt="star" width="90px" data-star="s2"></div>
+            <div><img id="star3" src="images/icons/star0.svg" alt="star" width="90px" data-star="s3"></div>
+            <div><img id="star4" src="images/icons/star0.svg" alt="star" width="90px" data-star="s4"></div>
+            <div><img id="star5" src="images/icons/star0.svg" alt="star" width="90px" data-star="s5"></div>
+            
+            <form id="avalivar" action="/avaliar" method="post">
+                <input class="input" id="id" name="id" type="text">
+                <input class="input" id="avaliacao" name="avaliacao" type="text">
+            </form>
+        </div>
+        
+        <div class="send-background">
+            <button class="star-send" form="avalivar" type="submit">Avaliar</button>
+        </div>
+
+    </main>
+</body>
+</html>

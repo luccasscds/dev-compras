@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Cadastro | dev.compras</title>
+
+    <link rel="stylesheet" href="styles/pages/all.css">
+    <link rel="stylesheet" href="styles/pages/cadastro.css">
+
+    <script src="scripts/cadastro.js" defer></script>
+</head>
+<body>
+    <main>
+
+        <section class="container-cadastro">
+            <div class="main-cadastro" oninput="cadastro.verificar()">
+                <div class="title-cadastro">
+                    <h1>Crie sua conta</h1>
+                </div>
+                <form id="form-cadastro" action="/cadastro" method="POST">
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail">
+                    <input type="text" name="name" id="name" placeholder="Seu nome">
+                    <input type="password" name="password" id="password" placeholder="Sua senha">
+                    <input type="password" name="cpassword" id="cpassword" placeholder="Confirme sua senha">
+                    <p id="erro-mensagem"></p> 
+                </form>
+                <div class="cadastro-text">
+                    <p class="cadastro-p">
+                        Ao se registrar, você aceita nossos <a class="cadastro-link">termos de uso</a> e a nossa<a class="cadastro-link"> política de privacidade</a>.
+                    </p>
+                </div>
+                <div class="background-submit">
+                    <input type="submit" id="input-button" form="form-cadastro" value="CRIAR">
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="container-title">
+            <div class="main-title">
+                <h1 class="one-title">Mais de 200 mil boosters já estão conectados.</h1>
+                <div class="two-title">Junte-se a milhares de devs e acelere na direção dos seus objetivos</div>
+                <div class="link-title">
+                    <a class="a-title" href="login">
+                        <img src="images/icons/seta.svg" alt="seta-esquerda" width="15px"> Voltar para o login
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

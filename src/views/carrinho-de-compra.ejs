@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Carrinho de compra</title>
+
+    <link rel="stylesheet" href="styles/pages/all.css">
+    <link rel="stylesheet" href="styles/pages/carrinho-de-compra.css">
+    
+    <script src="scripts/ferramentas/cep.js" defer></script>
+    <script src="scripts/ferramentas/search.js" defer></script>
+    <script src="scripts/carrinho-de-compras.js" defer></script>
+</head>
+<body>
+    <%- include('parts/header') %> 
+
+    <main>
+        <section class="shopping-cart">
+
+            <div class="container">
+                <div class="header-background">
+                    <div class="header-cart">
+                        <h2>Carrinho de compras</h2>
+                    </div>
+                    <div class="header-price">
+                        <div>preço</div>
+                    </div>
+                </div>
+                
+                <div class="item-products">
+                    <% if(produtos[0] != undefined) {%>
+                        <% produtos.forEach(produto => {%>
+                            <div class="item-product">
+                                <div class="product-left">
+                                    <div class="item-left">
+                                        <img src="<%= produto.photo %>" alt="<%= produto.id %>" width="200px" height="200px">
+                                    </div>
+                                    <div class="item-center">
+                                        <div id="nome"><%= produto.nome %></div>
+                                        
+                                        <% if(produto.estoque > 1) {%>
+                                            <div class="estoque on">Em estoque</div>
+                                        <%}else {%>
+                                            <div class="estoque off">Sem estoque</div>
+                                        <%}%>
+    
+                                        <% if(produto.departamento == 'camisa') {%>
+                                            <div> Tamanho: <%= produto.tamanho %></div>
+                                        <%}%> 
+    
+                                        <div class="buttons">
+                                            <form id="qnt-<%= produto.id %>" class="form-quantidade <%= produto.id %>" action="/add_produto" method="post">
+                                                <input type="text" name="IDproduto" id="IDproduto" value="<%= produto.id %>">
+                                                <input type="text" name="tamanho" id="tamanho" value="<%= produto?.tamanho %>">
+                                                <input type="number" name="quantidade" id="quantidade" value="<%= produto.quantidade %>">
+                                                <input type="number" name="somarOUsubtrair" id="somarOUsubtrair-<%= produto.id %>" min="-1" max="1">
+                                            </form>
+                                            <div class="alterar-button">
+                                                <b>Quantidade:</b> <button class="button-qnt" form="qnt-<%= produto.id %>" onclick="CarrinhoDeCompra.subtrair(event)">-</button><%= produto.quantidade %><button class="button-qnt" form="qnt-<%= produto.id %>"  onclick="CarrinhoDeCompra.adicionar(event)">+</button>
+                                            </div>
+
+                                            <button class="delete-button" form="delete-produto<%= produto.id %>" type="submit">
+                                                <img src="images/icons/lixeira.svg" alt="lixeira" width="20px">
+                                            </button>
+                                        </div>
+                                        
+                                        <form id="delete-produto<%= produto.id %>" action="/del_produto" method="post">
+                                            <input class="input-delete" type="text" name="id" value="<%= produto.id %>">
+                                        </form>
+    
+                                    </div>
+                                </div>
+                                <div class="product-right">
+                                    <div class="item-right">
+                                        <div id="price">R$ <%= produto.price.toString().replace('.',',') %></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <%});%>
+                    <%}else {%>
+                        <div></div>
+                    <%}%>
+                </div>
+            </div>
+
+            <div class="total-background">
+                <% if(quantidade >= 1) {%>
+                    <div class="total-sub">
+                        Preço total ( <%= quantidade %>  itens ):<div class="price">R$ <%= total.toFixed(2).replace('.',',') %></div>
+                    </div>
+                <%} else {%>
+                    <div class="total-sub">
+                        Preço total ( <%= quantidade %>  item ):<div class="price">R$ <%= total.toFixed(2).replace('.',',') %></div>
+                    </div>
+                <%}%>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('parts/footer') %> 
+</body>
+</html>

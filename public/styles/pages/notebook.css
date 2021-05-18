@@ -1,0 +1,109 @@
+main {
+    background: #e5e5e5;
+    
+    font-family: 'Montserrat', sans-serif;
+}
+.background-card {
+    background: #e5e5e5;
+
+    padding: 20px 0 0 40px;
+}
+#info-card {
+    background: #e5e5e5;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    color: #007185;
+
+    border-bottom: 1px solid white;
+}
+.display-center {
+    padding: 0 10px;
+}
+#nome {
+    font-size: larger;
+    font-weight: bold;
+
+    padding: 0 0 10px 0;
+}
+.star{
+    display: flex;
+
+    border-bottom: 1px solid white;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+}
+.price {
+    color: #e76f51;
+}
+#price {
+    font-weight: bold;
+}
+.info {
+    border-top: 1px solid white;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+.display-right {
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 30px 0 0 30px;
+}
+.estoque.on {
+    color: #2b9348;
+
+    font-weight: bold;
+    padding: 10px 0;
+}
+.estoque.off {
+    color: #e76f51;
+
+    font-weight: bold;
+    padding: 10px 0;
+}
+#IDproduto {
+    display: none;
+}
+#quantidade {
+    width: 30px;
+    height: 20px;
+
+    color: #007185;
+
+    border: none;
+    border-radius: 0.25rem;
+
+    text-align: end;
+}
+#input-carrinho {
+    background: #007185;
+    color: white;
+
+    width: 150px;
+    height: 30px;
+
+    border-radius: 0.25rem;
+    border: none;
+    margin: 10px 0;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.description-background {
+    background: #e5e5e5;
+    color: #007185;
+
+    padding: 10px 0 10px 40px;
+}
+#a-avaliacao {
+    background: #e5e5e5;
+    color: #007185;
+
+    margin: 0 0 0 40px;
+
+    text-decoration: revert;
+}

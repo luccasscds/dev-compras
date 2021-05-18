@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Login | dev.compras</title>
+
+    <link rel="stylesheet" href="styles/pages/all.css">
+    <link rel="stylesheet" href="styles/pages/login.css">
+
+    <script src="scripts/login.js" defer></script>
+</head>
+<body>
+    <main>
+        <section class="login-background">
+
+            <div class="title-login">
+                <div class="">
+                    <div class="title-text">Faça seu login</div>
+                    <div class="title-text">na plataforma</div>
+                </div>
+            </div>
+
+            <div class="login-subbackground">
+                <div class="login-main">
+                    <div class="login-sub-main">
+                        <form id="form-login" method="POST" action="/login"  oninput="login.verificar()">
+                            <input class="inputs" type="email" name="email" id="email" placeholder="E-mail">
+                            <input class="inputs" type="password" name="password" id="password" placeholder="Senha">
+                            <p id="mensagem"></p>
+                        </form>
+    
+                        <div class="submit">
+                            <input class="inputs" type="submit" id="input-submit" form="form-login" value="ENTRAR">
+                        </div>
+                        <div class="login-registrar">
+                            Não tem uma conta? <a href="/cadastro">Registre-se</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

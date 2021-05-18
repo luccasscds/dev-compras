@@ -1,0 +1,32 @@
+body {
+    background: #e5e5e5;
+}
+.star {
+    display: flex;
+    justify-content: center;
+
+    margin: 40px 0 0 0;
+}
+.input {
+    display: none;
+}
+.send-background {
+    display: flex;
+    justify-content: center;
+
+    margin: 40px 0 0 0;
+}
+.star-send {
+    width: 100px;
+    height: 30px;
+
+    background: #007185;
+    color: white;
+
+    border: none;
+    border-radius: 0.25rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}

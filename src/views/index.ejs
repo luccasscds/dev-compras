@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+
+    <title>Dev.Compras</title>
+
+    <link rel="stylesheet" href="styles/index.css">
+
+    <script src="scripts/ferramentas/search.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+    <%- include('parts/header') %> 
+
+    <main>
+        <section>
+            <img class="carrossel" src="images/banner/mother.jpg" alt="mother">
+        </section>
+
+        <section>
+            <div class="container-card">
+                <!--Ofertas de hoje-->
+                <div class="card-background">
+                    <a href="/notebook?produto=1">
+                        <div class="">
+                            <div class="card-header">
+                                <h2 class="">Ofertas de hoje</h2>
+                            </div>
+                            <div class="card-body">
+                                <img id="img" src="images/products/notebook-gamer.png" alt="notebook" width="200px" height="200px">
+                                <p id="price">R$7.368,32</p>
+                                <span class="desconto">
+                                    pagamento à vista tem desconto de 30%
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Mais vendido-->
+                <div class="card-background">
+                    <a href="/<%= vendido.departamento %>?produto=<%= vendido.id %>">
+                        <div class="">
+                            <div class="card-header">
+                                <h2 class="">Mais vendido</h2>
+                            </div>
+                            <div class="card-body">
+                                <img id="" src="<%= vendido.photo %>" alt="camisa" width="200px" height="200px">
+                                <p id="price"></p>
+                                <span class="desconto">
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Mais avaliado-->
+                <div class="card-background">
+                    <a href="/<%= desejado.departamento %>?produto=<%= desejado.id %>">
+                        <div class="">
+                            <div class="card-header">
+                                <h2 class="">Mais avaliado</h2>
+                            </div>
+                            <div class="card-body">
+                                <img id="" src="<%= desejado.photo %>" alt="notebook" width="200px" height="200px">
+                                <p id="price"></p>
+                                <span class="desconto">
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div class="card-background">
+                <div class="">
+                    <div class="card-header">
+                        <h2 class="">Jogos mais vendidos</h2>
+                    </div>
+                    <div class="card-body">
+                        <img src="images/products/ghost.jpg" alt="ghost" width="200px" height="200px">
+                        <img src="images/products/call_of_duty.jpg" alt="callosduty" width="200px" height="200px">
+                        <img src="images/products/the_last.jpg" alt="thelast" width="200px" height="200px">
+                        <p id="price"></p>
+                        <span class="desconto">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <%- include('parts/footer') %>
+</body>
+</html>

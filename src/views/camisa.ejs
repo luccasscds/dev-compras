@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Dev Compras: </title>
+
+    <link rel="stylesheet" href="styles/pages/all.css">
+    <link rel="stylesheet" href="styles/pages/camisa.css">
+    
+    <script src="scripts/ferramentas/avaliacao.js" defer></script>
+    <script src="scripts/camisa.js" defer></script>
+
+    <Style>
+        
+    </Style>
+</head>
+<body>
+    <%- include('parts/header')%>
+
+    <main>
+        <section>
+            <div class="background-card">
+                <div id="info-card">
+                    <div class="display-left">
+                        <img id="foto-produto" src="<%= produto.photo %>" alt="<%= produto.id %> " width="400px">
+                    </div>
+                    <div class="display-center">
+                        <p id="nome"><%= produto.nome %></p>
+                        <p>Marca: <%= produto.marca %></p>
+                        <div class="star">
+                            <!--MEDIA-->
+                                <% let avaliacao = produto.avaliacao %>
+                                <% let soma = (1*avaliacao.s1) + (2*avaliacao.s2) + (3*avaliacao.s3) + (4*avaliacao.s4) + (5*avaliacao.s5) %>
+                                <% let media = soma / (avaliacao.s1 + avaliacao.s2 + avaliacao.s3 + avaliacao.s4 + avaliacao.s5) %>
+                                <% media = media.toFixed(1) %>
+                            <!--FIM MEDIA-->
+                            <div><img id="star1" src="/images/icons/star0.svg" alt="star" width="20px"></div>
+                            <div><img id="star2" src="/images/icons/star0.svg" alt="star" width="20px"></div>
+                            <div><img id="star3" src="/images/icons/star0.svg" alt="star" width="20px"></div>
+                            <div><img id="star4" src="/images/icons/star0.svg" alt="star" width="20px"></div>
+                            <div><img id="star5" src="/images/icons/star0.svg" alt="star" width="20px"></div>
+                            <div id="mediaStar"><%= media %></div>
+                        </div>
+                        <div class="price">
+                            <small>Por: </small><span id="price">R$ <%= produto.price.toFixed(2).replace('.',',') %></span>
+                        </div>
+
+                        <div>
+                            <% if(produto.price < 250) %> 
+                            <% let parcelas = produto.price / 10 %>
+                            <p>Em até 10x R$ <%= parcelas.toFixed(2).replace('.',',') %> sem juros</p>
+                        </div>
+
+                        <div class="color">
+                            <b>Cor:</b> <%= produto.cor %> 
+                        </div>
+                        <div class="tamanhos" onclick="addCarrinhoDeCompra.addTamanho(event)">
+                            <b>Tamanho:</b>
+                            <% if(produto.tamanho.PP > 0) {%>
+                                <button class="button-tamanho active" data-tamanho="PP">PP</button>
+                            <%}else {%>
+                                <button class="button-tamanho deactive">PP</button>
+                            <%}%>
+    
+                            <% if(produto.tamanho.P > 0) {%>
+                                <button class="button-tamanho active" data-tamanho="P">P</button>
+                            <%}else {%>
+                            <button class="button-tamanho deactive">P</button>
+                            <%}%>
+    
+                            <% if(produto.tamanho.M > 0) {%>
+                                <button class="button-tamanho active" data-tamanho="M">M</button>
+                            <%}else {%>
+                            <button class="button-tamanho deactive">M</button>
+                            <%}%>
+    
+                            <% if(produto.tamanho.G > 0) {%>
+                                <button class="button-tamanho active" data-tamanho="G">G</button>
+                            <%}else {%>
+                            <button class="button-tamanho deactive">G</button>
+                            <%}%>
+    
+                            <% if(produto.tamanho.GG > 0) {%>
+                                <button class="button-tamanho active" data-tamanho="GG">GG</button>
+                            <%}else {%>
+                            <button class="button-tamanho deactive">GG</button>
+                            <%}%>
+                        </div>
+
+                    </div>
+                    <div class="display-right">
+                        <div class="price">
+                            <span id="price">R$ <%= produto.price.toFixed(2).replace('.',',') %></span>
+                        </div>
+                        <p>Estimar a entrega do produto</p>
+                        <p>Selicionar o endereço</p>
+                        <% if(produto.estoque > 0) {%>
+                            <p class="estoque on">Em estoque.</p>
+                        <%}else {%>
+                            <p class="estoque off">Sem estoque.</p>
+                        <%}%>
+                        <form id="form-produto" action="/add_produto" method="post">
+                            <input type="text" name="IDproduto" id="IDproduto" value="<%= produto.id %>">
+                            <input type="text" name="tamanho" id="tamanho" value="">
+                            <label for="quantidade">Quantidade: </label>
+                            <input id="quantidade" name="quantidade" type="number" min="1" value="1" onkeyup="addCarrinhoDeCompra.verificarinput()">
+                        </form>
+                        <button id="input-carrinho" form="form-produto" type="submit" onclick="addCarrinhoDeCompra.add()">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description-background">
+                <h3>Descrição do produto</h3>
+                <p id="description"><%= produto.description %></p>
+            </div>
+
+            <div>
+                <div><a id="a-avaliacao" href="/avaliacao?id=<%= produto.id %>">Avalie este produto</a></div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('parts/footer')%>
+</body>
+</html>

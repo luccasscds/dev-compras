@@ -1,0 +1,78 @@
+footer {
+    background: #14213d;
+
+    font-family: 'Montserrat', sans-serif;
+}
+.conheca {
+    flex-direction: column;
+
+    border-bottom: 1px solid #0a1a3b;
+    padding: 10px 0;
+}
+.conheca-title {
+    color: white;
+
+    display: flex;
+    justify-content: center;
+}
+.conheca-text {
+    flex-direction: column;
+
+    padding-top: 10px;
+}
+.conheca-text p {
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.afiliados {
+    flex-direction: column;
+    
+    border-bottom: 1px solid #0a1a3b;
+    padding: 10px 0;
+}
+.afiliados-logo {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+}
+.afiliados-text {
+    color: white;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+.termos {
+    border-bottom: 1px solid #0a1a3b;
+    padding: 10px 0;
+}
+.condicoes {
+    color: white;
+
+    display: flex;
+    justify-content: center;
+}
+.cnpj {
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+}
+.location {
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+}
+.cards {
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+}

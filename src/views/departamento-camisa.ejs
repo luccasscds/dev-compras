@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Dev compras: Camisa</title>
+    
+    <link rel="stylesheet" href="styles/pages/all.css">
+    <link rel="stylesheet" href="styles/pages/filter.css">
+    <link rel="stylesheet" href="styles/pages/departamento-camisa.css">
+    
+    <script src="scripts/ferramentas/filtros.js" defer></script>
+    <script src="scripts/departamento-camisa.js" defer></script>
+</head>
+
+<body>
+    <%- include('parts/header') %> 
+
+    <main>
+        <!--filtro-->
+        <section>
+            <div class="filter">
+                <div id="marcas">
+                    <div class="marcas-title"><b>Marca</b></div>
+                    <div class="">
+                        <ul id="ul-marcas" onclick="filtroCamisa.marcas(event)">
+                            <li id="li-nike">
+                                <div>
+                                    <div class="div-marca">
+                                        <input type="radio" name="checkbox-marcas" id="checkbox-nike" class="checkbox"
+                                            data-marca="nike">
+                                        <label data-marca="nike">Nike</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="li-reserva">
+                                <div>
+                                    <div class="div-marca">
+                                        <input type="radio" name="checkbox-marcas" id="checkbox-reserva"
+                                            class="checkbox" data-marca="reserva">
+                                        <label data-marca="reserva">Reserva</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="li-the-coolmind">
+                                <div>
+                                    <div class="div-marca">
+                                        <input type="radio" name="checkbox-marcas" id="checkbox-coolmind"
+                                            class="checkbox" data-marca="coolmind">
+                                        <label data-marca="coolmind">The coolmind</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="price">
+                    <div class="price-title"><b>Preço</b></div>
+                    <div class="">
+                        <ul id="ul-prices" onclick="filtroCamisa.prices(event)">
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p1" class="checkbox"
+                                            data-price="p1">
+                                    <span data-price="p1">até R$49</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p2" class="checkbox"
+                                            data-price="p2">
+                                    <span data-price="p2">$50 a R$99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p3" class="checkbox"
+                                            data-price="p3">
+                                    <span data-price="p3">R$100 a R$249</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p4" class="checkbox"
+                                            data-price="p4">
+                                    <span data-price="p4">mais de R$250</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="cores">
+                    <div class="cores-title"><b>Cores</b></div>
+                    <div class="">
+                        <ul id="ul-cores" onclick="filtroCamisa.cores(event)">
+                            <li id="li-preto">
+                                <div>
+                                    <div class="div-cor">
+                                        <input type="radio" name="checkbox-cores" id="checkbox-preto" class="checkbox"
+                                            data-cor="preto">
+                                        <label data-cor="preto">Preto</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="li-vinho">
+                                <div>
+                                    <div class="div-cor">
+                                        <input type="radio" name="checkbox-cores" id="checkbox-vinho"
+                                            class="checkbox" data-cor="vinho">
+                                        <label data-cor="vinho">Vinho</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="li-branco">
+                                <div>
+                                    <div class="div-cor">
+                                        <input type="radio" name="checkbox-cores" id="checkbox-branco"
+                                            class="checkbox" data-cor="branco">
+                                        <label data-cor="branco">Branco</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tamanhos">
+                    <div class="tamanhos-title"><b>Tamanhos</b></div>
+                    <div class="">
+                        <ul id="ul-tamanhos" onclick="filtroCamisa.tamanhos(event)">
+                            <li id="li-PP">
+                                <div>
+                                    <div class="div-tamanho">
+                                        <input type="radio" name="checkbox-tamanhos" id="checkbox-pp" class="checkbox"
+                                            data-tamanho="pp">
+                                        <label data-tamanho="pp">PP</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="li-P">
+                                <div>
+                                    <div class="div-tamanho">
+                                        <input type="radio" name="checkbox-tamanhos" id="checkbox-p"
+                                            class="checkbox" data-tamanho="p">
+                                        <label data-tamanho="p">P</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="li-M">
+                                <div>
+                                    <div class="div-tamanho">
+                                        <input type="radio" name="checkbox-tamanhos" id="checkbox-m"
+                                            class="checkbox" data-tamanho="m">
+                                        <label data-tamanho="m">M</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="li-G">
+                                <div>
+                                    <div class="div-tamanho">
+                                        <input type="radio" name="checkbox-tamanhos" id="checkbox-g"
+                                            class="checkbox" data-tamanho="g">
+                                        <label data-tamanho="g">G</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="li-GG">
+                                <div>
+                                    <div class="div-tamanho">
+                                        <input type="radio" name="checkbox-tamanhos" id="checkbox-gg"
+                                            class="checkbox" data-tamanho="gg">
+                                        <label data-tamanho="gg">GG</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--fim filtro-->
+
+        <section class="cards">
+            <div class="container-photos">
+                <% if(produtos[0]?.id) {%>
+                    <% produtos.forEach( produto => {%>
+                        <div class="sub-container">
+                            <a href="/<%= produto.departamento %>?produto=<%= produto.id %>">
+                                <div class="product">
+                                    <img src="<%= produto.photo %>" alt="<%= produto.departamento %>">
+                                </div>
+                            </a>
+                            <div class="description-product">
+                                <p><%= produto.nome %></p>
+                            </div>
+                            <div class="share-product">
+                                <img src="images/icons/share.svg" alt="share icon" width="20px">
+                            </div>
+                            <div class="value-product">
+                                <p>R$ <%= produto.price.toFixed(2).replace('.',',') %></p>
+                            </div>
+                        </div>
+                    <%})%> 
+                <%}else {%>
+                    <div></div>
+                <%}%>
+            </div>
+        </section>
+    </main>
+
+    <%- include('parts/footer') %>
+</body>
+
+</html>

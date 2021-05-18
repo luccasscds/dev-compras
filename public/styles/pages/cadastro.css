@@ -1,0 +1,114 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    background: #f2f2f2;
+}
+main {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.container-cadastro {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-cadastro {
+    width: 400px;
+    height: 500px;
+
+    background: white;
+    
+    border-radius: 0.5rem;
+}
+.title-cadastro {
+    display: flex;
+    justify-content: center;
+
+    margin: 50px 0 20px 0;
+
+    color: #007185;
+}
+#form-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    width: 300px;
+    height: 40px;
+
+    display: block;
+
+    background: #d6d6d6;
+
+    border-radius: 0.25rem;
+    border: none;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007185;
+}
+#erro-mensagem {
+    color: #e76f51;
+}
+.cadastro-text {
+    display: flex;
+    justify-content: center;
+
+}
+.cadastro-p {
+    width: 300px;
+
+    font-size: 0.8rem;
+}
+.cadastro-link {
+    color: #007185;
+
+    cursor: pointer;
+}
+.background-submit {
+    display: flex;
+    justify-content: center;
+}
+#input-button {
+    background: #007185;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin: 20px 0 0 0;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #007185;
+}
+.one-title {
+    width: 250px;
+
+    margin: 40px 0;
+
+    font-size: 2rem;
+}
+.two-title {
+    width: 350px;
+
+    margin: 0 0 40px 0;
+}
+.a-title {
+    color: #007185;
+    
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+.a-title:hover {
+    color: #2b9348;
+}

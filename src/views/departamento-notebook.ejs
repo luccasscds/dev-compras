@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Dev compras: Notebook</title>
+
+    <link rel="stylesheet" href="styles/pages/all.css">
+    <link rel="stylesheet" href="styles/pages/departamento-notebook.css">
+    <link rel="stylesheet" href="styles/pages/filter.css">
+
+    <script src="scripts/ferramentas/filtros.js" defer></script>
+</head>
+<body>
+    <%- include('parts/header') %>
+
+    <main>
+        <!--filtro-->
+        <section class="filter">
+            <div class="">
+                <div id="marcas">
+                    <div class="marcas-title"><b>Marca</b></div>
+                    <div class="">
+                        <ul id="ul-marcas" onclick="filtroNotebook.marcas(event)">
+                            <% produtos.forEach( produto => {%>
+                                <li id="li-<%= produto.marca %>">
+                                    <div>
+                                        <div class="div-marca">
+                                            <input type="radio" name="checkbox-marcas" id="checkbox-<%= produto.marca %>" class="checkbox" data-marca="<%= produto.marca %>">
+                                            <label data-marca="<%= produto.marca %>"><%= produto.marca %></label>
+                                        </div>
+                                    </div>
+                                </li>
+                            <%})%>
+                        </ul>
+                    </div>
+                </div>
+                <div id="price">
+                    <div class="price-title"><b>Preço</b></div>
+                    <div class="">
+                        <ul id="ul-prices" onclick="filtroNotebook.prices(event)">
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p1" class="checkbox"
+                                        data-so="p1">
+                                    <span data-price="p1">até R$1500</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p2" class="checkbox"
+                                        data-so="p2">
+                                    <span data-price="p2">$1500 a R$2000</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p3" class="checkbox"
+                                        data-so="p3">
+                                    <span data-price="p3">R$2000 a R$3000</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p4" class="checkbox"
+                                        data-so="p4">
+                                    <span data-price="p4">R$3000 a R$4000</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-prices" id="checkbox-p5" class="checkbox"
+                                        data-so="p5">
+                                    <span data-price="p5">mais de R$4000</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="outros-filtros">
+                    <div class="so-title"><b>Sistema Operacional</b></div>
+                    <div class="">
+                        <ul id="ul-SO" onclick="filtroNotebook.SOs(event)">
+                            <% produtos.forEach( (produto, index) => { index++%>
+                                <li>
+                                    <div>
+                                        <input type="radio" name="checkbox" id="checkbox-so<%= index %>" class="checkbox"
+                                            data-so="so<%= index %>">
+                                        <span data-so="so<%= index %>"><%= produto.so %></span>
+                                    </div>
+                                </li>
+                            <%})%>
+                        </ul>
+                    </div>
+                    <div class="cpu-title"><b>tipo de CPU</b></div>
+                    <div class="">
+                        <ul id="ul-cpu" onclick="filtroNotebook.CPUs(event)">
+                            <%produtos.filter((produto, index, array) => {%>
+                                <% let verificar = produto.cpu === array[index -1]?.cpu ? true : false %>
+                                <% if(verificar == false) {%>
+                                    <li>
+                                        <div>
+                                            <input type="radio" name="checkbox-cpus" id="checkbox-<%= produto.cpu %>" class="checkbox"
+                                            data-cpu="<%= produto.cpu %>">
+                                            <span data-cpu="<%= produto.cpu %>">Intel Core <%= produto.cpu %></span>
+                                        </div>
+                                    </li>
+                                <%}%>
+                            <%})%>
+                        </ul>
+                    </div>
+                    <div class="ram-title"><b>Capacidade de RAM</b></div>
+                    <div class="">
+                        <ul id="ul-RAM" onclick="filtroNotebook.RAMs(event)">
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-RAMs" id="checkbox-r1" class="checkbox"
+                                        data-ram="r1">
+                                    <span data-ram="r1">Até 1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-RAMs" id="checkbox-r2" class="checkbox"
+                                        data-ram="r2">
+                                    <span data-ram="r2">2 GB</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-RAMs" id="checkbox-r3" class="checkbox"
+                                        data-ram="r3">
+                                    <span data-ram="r3">4 GB</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-RAMs" id="checkbox-r4" class="checkbox"
+                                        data-ram="r4">
+                                    <span data-ram="r4">8 GB</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-RAMs" id="checkbox-r5" class="checkbox"
+                                        data-ram="r5">
+                                    <span data-ram="r5">12 GB ou mais</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hd-title"><b>Capacidade do HD</b></div>
+                    <div class="">
+                        <ul id="ul-HD" onclick="filtroNotebook.HDs(event)">
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-hds" id="checkbox-h1" class="checkbox"
+                                        data-hd="h1">
+                                    <span data-hd="h1">Até 199 GB</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-hds" id="checkbox-h2" class="checkbox"
+                                        data-hd="h2">
+                                    <span data-hd="h2">200 - 499 GB</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-hds" id="checkbox-h3" class="checkbox"
+                                        data-hd="h3">
+                                    <span data-hd="h3">500 - 999 GB</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-hds" id="checkbox-h4" class="checkbox"
+                                        data-hd="h4">
+                                    <span data-hd="h4">1 TB ou mais</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tela-title"><b>Tamanho da tela</b></div>
+                    <div class="">
+                        <ul id="ul-tela" onclick="filtroNotebook.telas(event)">
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-tela" id="checkbox-t1" class="checkbox"
+                                        data-tela="t1">
+                                    <span data-tela="t1">Até 10 polegadas</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-tela" id="checkbox-t2" class="checkbox"
+                                        data-tela="t2">
+                                    <span data-tela="t2">11 a 12 polegadas</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-tela" id="checkbox-t3" class="checkbox"
+                                        data-tela="t3">
+                                    <span data-tela="t3">13 a 14 polegadas</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" name="checkbox-tela" id="checkbox-t4" class="checkbox"
+                                        data-tela="t4">
+                                    <span data-tela="t4">15 polegadas ou mais</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--fim filtro-->
+
+        <section class="cards">
+            <div class="container-photos">
+                <% if(produtos[0]?.id) {%>
+                    <% produtos.forEach( produto => {%>
+                        <div class="sub-container">
+                            <a href="/<%= produto.departamento %>?produto=<%= produto.id %> ">
+                                <div class="product">
+                                    <img src="<%= produto.photo %>" alt="<%= produto.departamento %>">
+                                </div>
+                            </a>
+                            <div class="description-product">
+                                <p><%= produto.nome %></p>
+                            </div>
+                            <div class="share-product">
+                                <img src="images/icons/share.svg" alt="share icon" width="20px">
+                            </div>
+                            <div class="value-product">
+                                <p>R$ <%= produto.price.toFixed(2).replace('.',',') %></p>
+                            </div>
+                        </div>
+                    <%})%> 
+                <%}else {%>
+                    <div></div>
+                <%}%>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('parts/footer') %> 
+</body>
+</html>

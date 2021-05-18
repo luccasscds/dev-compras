@@ -1,0 +1,121 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    background: #f2f2f2;
+    color: #007185;
+}
+.shopping-cart{
+    display: grid;
+    grid-template-columns: auto auto;
+
+    margin: 20px 20px 0 20px;
+}
+.header-background {
+    background: white;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    border-bottom: 2px solid #f2f2f2;
+    margin: 0 10px 0 0;
+}
+.header-cart {
+    padding: 10px;
+}
+.header-price {
+    padding: 10px;
+
+    text-align: end;
+}
+.item-product {
+    background: white;
+
+    display: grid;
+    grid-template-columns: auto auto;
+
+    margin: 0 10px 0 0;
+    padding: 20px 10px 0 10px;
+}
+.product-left {
+    display: flex;
+
+    border-bottom: 2px solid #f2f2f2;
+}
+.product-right {
+    width: 100px;
+
+    border-bottom: 2px solid #f2f2f2;
+    padding:  0 0 0 40px;
+}
+#nome {
+    font-weight: 600;
+}
+.estoque.on {
+    color: #2b9348;
+
+    font-weight: 500;
+
+    padding: 10px 0;
+}
+.estoque.off {
+    color: #e76f51;
+
+    font-weight: 500;
+
+    padding: 10px 0;
+}
+.form-quantidade {
+    display: none;
+}
+.buttons {
+    display: flex;
+}
+.button-qnt {
+    width: 20px;
+    height: 20px;
+
+    background: #f2f2f2;
+    color: #007185;
+
+    border: none;
+    border-radius: 50%;
+    margin: 0 10px;
+    
+    cursor: pointer;
+}
+.input-delete {
+    display: none;
+}
+.delete-button {
+    background: none;
+
+    border: none;
+    margin: 0 20px;
+
+    cursor: pointer;
+}
+#price {
+    font-weight: bold;
+}
+.price {
+    font-weight: bold;
+}
+.total-background {
+    width: 300px;
+    height: 100px;
+
+    background: white;
+    
+    border-radius: 0.5rem;
+}
+.total-sub {
+    width: 300px;
+    height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #2b9348;
+
+    font-weight: bold;
+}

@@ -1,0 +1,133 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*MODAL CEP*/
+.container-background {
+    width: 100%;
+    height: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    background: rgba(0, 0, 0, 0.8);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 1;
+    visibility: visible;
+}
+.sub-container-background {
+    width: 600px;
+    height: 200px;
+
+    background: #e5e5e5;
+    color: #007185;
+    
+    border-radius: 0.5rem;
+
+    display: block;
+}
+.cep-title {
+    display: flex;
+    justify-content: center;
+
+    margin: 20px 0 10px 0;
+
+    font-weight: bold;
+    font-size: 2rem;
+}
+.sub-title {
+    display: flex;
+    justify-content: center;
+}
+.add-cep {
+    display: flex;
+    justify-content: center;
+}
+#cep {
+    height: 20px;
+
+    border: none;
+    border-radius: 0.25rem;
+
+    color: #007185;
+}
+#erroMessage{
+    color: red;
+}
+.form-2 {
+    display: none;
+}
+.corfim-cep {
+    display: flex;
+    justify-content: center;
+}
+#submit-cep {
+    width: 70px;
+    height: 30px;
+
+    background: #2b9348;
+    color: white;
+
+    border: none;
+    border-radius: 0.25rem;
+}
+/*FIM MODAL CEP*/
+
+
+/*MODAL LOGIN*/
+.modal-login {
+    display: flex;
+
+    visibility: hidden;
+    opacity: 0;
+}
+.modal-login.on {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-sub-login {
+    position: absolute;
+    top: 50px;
+    right: 20%;
+}
+.modal-sub-login:after {
+    content: '';
+
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+
+    top: -9px;
+    left: 20%;
+}
+.modal-menu-login {
+    height: 50px;
+
+    background: black;
+
+    border-radius: 0.25rem;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-sub-login button{
+    color: white;
+    cursor: pointer;
+
+    border: none;
+    background: none;
+}
+.modal-sub-login a{
+    color: white;
+}

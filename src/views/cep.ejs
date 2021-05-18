@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Cep</title>
+
+    <link rel="stylesheet" href="styles/pages/modal.css">
+
+    <script src="scripts/ferramentas/cep.js" defer></script>
+</head>
+<body>
+    <!-- modal part -->
+        <section>
+            <!-- modal nav -->
+            <div id="modal-cep" class="container-background">
+                <div class="sub-container-background">
+                    <div class="cep">
+                        <div class="cep-title">
+                            <div>Escolha sua localização</div>
+                        </div>
+                        <div class="sub-title">
+                            <div>Insira um cep</div>
+                        </div>
+                        <div class="add-cep" oninput="cep.verificarCep()">
+                            <form id="form-cep" method="POST">
+                                <input type="text" name="cep" id="cep" maxlength="8">
+                                <p id="erroMessage"></p>
+                                <div class="form-2">
+                                <input type="text" name="logradouro" id="logradouro">
+                                <input type="text" name="complemento" id="complemento">
+                                <input type="text" name="bairro" id="bairro">
+                                <input type="text" name="localidade" id="localidade">
+                                <input type="text" name="uf" id="uf">
+                                <input type="number" name="ibge" id="ibge">
+                                <input type="text" name="gia" id="gia">
+                                <input type="number" name="ddd" id="ddd">
+                                <input type="number" name="siafi" id="siafi">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="corfim-cep">
+                            <span>
+                                <input id="submit-cep" type="submit" form="form-cep" value="Confirmar">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- fim modal part -->
+</body>
+</html>

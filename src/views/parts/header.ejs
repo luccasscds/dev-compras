@@ -1,0 +1,84 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles/pages/header.css">
+<link rel="stylesheet" href="styles/pages/modal.css">
+
+<script src="scripts/ferramentas/header.js" defer></script>
+
+<header>
+    <div class="nav-container-top">
+        <div class="nav-left">
+            <div class="logo">
+                <h1><a href="/">Dev.Compras</a></h1>
+            </div>
+            <div class="local">
+                <div id="a-cep"> 
+                    <span class="input-local">
+                        <% if(cep.cep != null && cep.cep != undefined && cep.cep != " ") {%>
+                            <a href="/cep">
+                                <div class="img-location">
+                                    <img src="images/icons/location.svg" alt="location" width="20px">
+                                </div>
+                                <div class="cep">
+                                    <div><p>Enviar para <%= cep.cep %></p></div>
+                                </div>
+                            </a>
+                        <%}else {%>
+                            <a href="/cep">Selecione o endereço</a>
+                        <%}%>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <form id="search" action="/view" method="post">
+                <input id="input-buscar-produto" type="text" name="search">
+            </form>
+            <button id="input-submit" form="search" type="submit">
+                <img src="images/icons/search.svg" alt="search" width="20px">
+            </button>
+        </div>
+        <div class="nav-right">
+            <div class="login">
+                <div onclick="modal.active(1)">
+                    <% if(user.ativo == 'true') {%>
+                        <p>Olá, <%= user.name %></p>
+                    <%} else {%> 
+                        <p>Faça o seu login</p>
+                    <%}%>
+                </div>
+               
+                <!--modal-->
+                <div class="modal-login">
+                    <div class="modal-sub-login">
+                        <div class="modal-menu-login">
+                            <% if(user.ativo == 'true') {%>
+                                <button form="sair-user" type="submit">Sair da conta</button>
+                            <%} else {%>
+                                <div>
+                                    <p><a href="/login">Login</a></p>
+                                    <p><a href="/cadastro">Cadastro</a></p>
+                                </div>
+                            <%}%>
+                            <form id="sair-user" 
+                            method="POST" 
+                            action="/exit/<%= user.id %>"></form>
+                        </div>
+                    </div>
+                </div>
+                <!--fim modal-->
+            </div>
+            <div class="carrinho-de-Compra">
+                <a href="/carrinho-de-compra">
+                    <% if(quantidade != undefined){%>
+                        <div class="number-cart"><%= quantidade %></div>
+                    <%}else{%>
+                        <div></div>
+                    <%}%>
+                    <img src="images/icons/cart.svg" alt="cart" width="30px">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #e5e5e5;
+}
+
+
+/*MAIN===========================*/
+.carrossel {
+    width: 100vw;
+}
+
+.container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    position: absolute;
+    top: 17rem;
+    left: 4%;
+}
+.card-background {
+    background: white;
+
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+.card-header {
+    display: flex;
+    justify-content: center;
+
+    color: #007185;
+
+    padding-bottom: 20px;
+}
+#img {
+    display: flex;
+    margin: 0 auto;
+}
+#price {
+    color: #007185;
+}
+.desconto {
+    color: #007185;
+}
