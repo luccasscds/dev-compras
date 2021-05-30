@@ -131,3 +131,18 @@ main {
 
     text-decoration: revert;
 }
+
+/*=================================
+responsive
+=================================*/
+@media (max-width: 900px) {
+    #info-card {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 399px) {
+    img#foto-produto {
+        width: 100vw;
+    }
+}

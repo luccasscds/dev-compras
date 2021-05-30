@@ -14,6 +14,7 @@ module.exports = {
         let omaisvendido = undefined
         let desejado = undefined
         let media = 0
+        let weekBanner = 'images/banner/alexa.jpg'
         let User
 
         lista.forEach( produto => totalProduto += Number(produto.quantidade))
@@ -45,6 +46,24 @@ module.exports = {
             }
         })
 
-        return res.render('index', { cep: cep , user: User , quantidade: totalProduto, vendido: omaisvendido, desejado: desejado })
+        function datasComemorativas() {
+            let date = new Date()
+            let weekday = date.getDay()
+            let day = date.getDate()
+            let month = date.getMonth()
+
+            if(month === 4) {
+                if(day < 15) {
+                    weekBanner = 'images/banner/mother.jpg'
+                }
+
+                if(day > 17 && day < 26) {
+                    weekBanner = 'images/banner/geek.jpg'
+                }
+            }
+        }
+        datasComemorativas()
+
+        return res.render('index', { cep: cep , user: User , quantidade: totalProduto, vendido: omaisvendido, desejado: desejado, banner: weekBanner })
     }
 }

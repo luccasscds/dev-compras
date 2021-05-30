@@ -19,12 +19,10 @@ body {
 }
 
 .container-card {
+    width: 100vw;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
-    position: absolute;
-    top: 17rem;
-    left: 4%;
 }
 .card-background {
     background: white;
@@ -55,4 +53,21 @@ body {
 }
 .desconto {
     color: #007185;
+}
+/*=================================
+responsive
+=================================*/
+@media (min-width: 1920px){
+    .carrossel {
+        width: 1920px;
+    }
+    .container-card {
+        width: 1920px;
+    }
+}
+@media (max-width: 780px) {
+    .container-card {
+        display: flex;
+        flex-flow: column;
+    }
 }

@@ -56,3 +56,16 @@ main {
     color: #007185;
 }
 /*FIM CARDS*/
+
+/*=================================
+responsive
+=================================*/
+@media (max-width: 830px) {
+    .container-photos {
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-container {
+        margin: 0 0 30px 0;
+    }
+}

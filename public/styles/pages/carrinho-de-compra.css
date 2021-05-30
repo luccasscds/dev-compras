@@ -10,6 +10,9 @@ body {
 
     margin: 20px 20px 0 20px;
 }
+.container {
+    min-width: 556px;
+}
 .header-background {
     background: white;
     display: grid;
@@ -118,4 +121,14 @@ body {
     color: #2b9348;
 
     font-weight: bold;
+}
+
+/*=================================
+responsive
+=================================*/
+@media (max-width: 1000px){
+    .shopping-cart {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }

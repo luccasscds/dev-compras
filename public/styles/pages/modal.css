@@ -131,3 +131,10 @@ body {
 .modal-sub-login a{
     color: white;
 }
+
+@media (max-width: 1200px) {
+    .modal-sub-login {
+        top: auto;
+        right: auto;
+    }
+}

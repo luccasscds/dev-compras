@@ -17,9 +17,12 @@ header {
     margin: 0 0 20px 0;
 }
 
+.nav-main {
+    display: flex;
+}
 /*nav-left*/
 .nav-left {
-    width: 33.33vw;
+    width: 16.665vw;
     display: flex;
 }
 .logo h1 a{
@@ -34,8 +37,6 @@ header {
 }
 .local {
     margin: 10px auto 0 auto;
-
-    font-size: 0.8rem;
 }
 div#a-cep {
     position: relative;
@@ -53,7 +54,9 @@ div#a-cep {
 /*nav-center*/
 .nav-center {
     width: 33.33vw;
+    
     display: flex;
+    align-items: center;
 }
 form#search {
     width: 90%;
@@ -85,6 +88,7 @@ button#input-submit {
     width: 33.33vw;
 
     display: flex;
+    align-items: center;
 }
 .login {
     width: 50%;
@@ -102,7 +106,7 @@ button#input-submit {
 
     position: relative;
 }
-.carrinho-de-Compra a {
+.a-cart {
     width: 30px;
 
     display: flex;
@@ -124,4 +128,69 @@ button#input-submit {
     left: 8px;
 
     font-weight: bold;
+}
+.menu {
+    display: none;
+
+    cursor: pointer;
+}
+
+/*=================================
+responsive
+=================================*/
+@media (max-width: 1200px) {
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-main {
+        display: none;
+    }
+    .nav-main.on {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .nav-left {
+        width: auto;
+        margin: 10px;
+    }
+    .nav-center {
+        width: auto;
+        justify-content: center;
+        margin: 10px;
+    }
+    form#search {
+        width: auto;
+    }
+    .nav-right {
+        width: auto;
+
+        display: flex;
+        justify-content: center;
+
+        margin: 10px;
+    }
+    .login {
+        width: auto;
+
+        margin: 10px;
+    }
+    .carrinho-de-Compra {
+        width: auto;
+
+        display: flex;
+        justify-content: center;
+    }
+    .a-cart {
+        position: relative;
+    }
+    .menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .menu img{
+        width: 40px;
+    }
 }
