@@ -15,7 +15,20 @@ No momento não está disponível.
 
 ## 📥 Dowloand
 Outa opção para visualizar o projeto é baixando o projeto. Veja o passo a passo:
-- Git clone ...
-- Npm install packajosn.json (na raíz do projeto)
-- Npm run dev
-- Entre no navegador e Digite localhost:3000
+
+Baixe o projeto
+```
+Git clone https://github.com/luccasscds/dev-compras.git
+```
+Instale o packajson
+```
+Npm install packajosn.json
+```
+Rode o projeto
+```
+Npm run dev
+```
+Entre no navegador e Digite
+```
+localhost:3000
+```
