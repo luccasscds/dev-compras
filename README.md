@@ -1,10 +1,21 @@
-### Olá pessoal
+# 🛒 Dev.Compras
 
-# passo a passo para ver o projeto:
-git clone...
+## 🚀 Tecnologias
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+- HTML
+- CSS
+- JavaScript
+- Node js
+- Express
+- EJS
+- SQlite
 
-npm i package.json
+## 🔖 Layout
+No momento não está disponível.
 
-npm run dev
-
-digite no navegador localhost:3000
+## 📥 Dowloand
+Outa opção é baixando o projeto. Veja o passo a passo:
+- Git clone ...
+- Npm install packajosn.json (na raíz do projeto)
+- Npm run dev
+- Entre no navegador e Digite localhost:3000
