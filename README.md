@@ -14,7 +14,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 No momento não está disponível.
 
 ## 📥 Dowloand
-Outa opção é baixando o projeto. Veja o passo a passo:
+Outa opção para visualizar o projeto é baixando o projeto. Veja o passo a passo:
 - Git clone ...
 - Npm install packajosn.json (na raíz do projeto)
 - Npm run dev
