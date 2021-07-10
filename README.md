@@ -18,15 +18,15 @@ Outa opção para visualizar o projeto é baixando o projeto. Veja o passo a pas
 
 Baixe o projeto
 ```
-Git clone https://github.com/luccasscds/dev-compras.git
+git clone https://github.com/luccasscds/dev-compras.git
 ```
 Instale o packajson
 ```
-Npm install packajosn.json
+npm install packajosn.json
 ```
 Rode o projeto
 ```
-Npm run dev
+npm run dev
 ```
 Entre no navegador e Digite
 ```
