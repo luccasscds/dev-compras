@@ -29,6 +29,5 @@ Rode o projeto
 npm run dev
 ```
 Entre no navegador e Digite
-```
-localhost:3000
-```
+
+[localhost:3000](http://localhost:3000/)
