@@ -1,5 +1,7 @@
 # 🛒 Dev.Compras
 
+<img src="https://github.com/luccasscds/dev-compras/blob/main/.github/dev-compras.png?raw=true">
+
 ## 🚀 Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML
