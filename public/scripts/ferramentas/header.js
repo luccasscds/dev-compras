@@ -11,14 +11,16 @@ const modal = {
         this.login = 'deactive'
         }
     },
+
     menuActive(){
-        if(this.menu == 'deactive') {
-            document.querySelector('.nav-container-top').style.display = "block";
-            document.querySelector('.nav-main').classList.add('on');
+        if(this.menu === 'deactive') {
+
+            document.querySelector('.nav-container-top').classList.add('on');
+
             this.menu = 'active'
-        }else if (this.menu == 'active') {
-            document.querySelector('.nav-container-top').style.display = "flex";
-            document.querySelector('.nav-main').classList.remove('on');
+        }else {
+            document.querySelector('.nav-container-top').classList.remove('on');
+
             this.menu = 'deactive'
         }
     }

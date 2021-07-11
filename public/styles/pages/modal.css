@@ -1,8 +1,4 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/*MODAL CEP*/
+/********MODAL CEP********/
 .container-background {
     width: 100%;
     height: 100%;
@@ -78,6 +74,40 @@ body {
 }
 /*FIM MODAL CEP*/
 
+/********Modal Header********/
+.menu {
+    width: 40px;
+    height: 5px;
+
+    background-color: var(--white-grey);
+
+    position: absolute;
+    top: 50%;
+    right: 10%;
+
+    display: none;
+    cursor: pointer;
+}
+
+.menu::before, .menu::after {
+    content: "";
+    width: inherit;
+    height: inherit;
+
+    position: absolute;
+
+    background-color: inherit;
+}
+
+.menu::before {
+    top: -10px;
+}
+
+.menu::after {
+    top: 10px;
+}
+/********Fim Modal Header********/
+
 
 /*MODAL LOGIN*/
 .modal-login {
@@ -136,5 +166,32 @@ body {
     .modal-sub-login {
         top: auto;
         right: auto;
+    }
+}
+
+/*===========================
+Menu Header
+============================*/
+@media (max-width: 1200px) {
+    .menu {
+        display: flex;
+
+        transition: transform 1s linear;
+    }  
+    
+    header .nav-container-top.on .menu {
+        top: 10%;
+        
+        transition: transform 1s linear;
+        transform: rotate(-45deg);
+    }
+    
+    header .nav-container-top.on .menu::before {
+        top: 0;
+        transform: rotate(-90deg);
+    }
+
+    header .nav-container-top.on .menu::after {
+        content: none;
     }
 }
