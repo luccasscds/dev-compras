@@ -1,10 +1,12 @@
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+<!-- CSSs -->
+<link rel="stylesheet" href="/styles/pages/header.css">
+<link rel="stylesheet" href="/styles/pages/modal.css">
 
-<link rel="stylesheet" href="styles/pages/header.css">
-<link rel="stylesheet" href="styles/pages/modal.css">
-
-<script src="scripts/ferramentas/header.js" defer></script>
+<!-- Scripts -->
+<script src="/scripts/ferramentas/header.js" defer></script>
 
 <header>
     <div class="nav-container-top">
@@ -19,7 +21,7 @@
                             <% if(cep.cep != null && cep.cep != undefined && cep.cep != " ") {%>
                                 <a href="/cep">
                                     <div class="img-location">
-                                        <img src="images/icons/location.svg" alt="location" width="20px">
+                                        <img src="/images/icons/location.svg" alt="location" width="20px">
                                     </div>
                                     <div class="cep">
                                         <% let number = cep.cep.slice(0,5)+"-"+cep.cep.slice(5) %> 
@@ -39,7 +41,7 @@
                     <input id="input-buscar-produto" type="text" name="search">
                 </form>
                 <button id="input-submit" form="search" type="submit">
-                    <img src="images/icons/search.svg" alt="search" width="20px">
+                    <img src="/images/icons/search.svg" alt="search" width="20px">
                 </button>
             </div>
     
@@ -80,14 +82,12 @@
                         <%}else{%>
                             <div></div>
                         <%}%>
-                        <img src="images/icons/cart.svg" alt="cart" width="30px">
+                        <img src="/images/icons/cart.svg" alt="cart" width="30px">
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="menu">
-            <img src="images/icons/menu.svg" alt="menu" onclick="modal.menuActive()">
-        </div>
+        <div class="menu" onclick="modal.menuActive()"></div>
     </div>
 </header>

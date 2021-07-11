@@ -14,7 +14,6 @@ const modal = {
 
     menuActive(){
         if(this.menu === 'deactive') {
-
             document.querySelector('.nav-container-top').classList.add('on');
 
             this.menu = 'active'

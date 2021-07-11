@@ -76,7 +76,7 @@
 
 /********Modal Header********/
 .menu {
-    width: 40px;
+    width: clamp(30px, 6vw ,40px);
     height: 5px;
 
     background-color: var(--white-grey);
@@ -111,21 +111,34 @@
 
 /*MODAL LOGIN*/
 .modal-login {
-    display: flex;
-
     visibility: hidden;
     opacity: 0;
 }
+
 .modal-login.on {
     visibility: visible;
     opacity: 1;
 }
-.modal-sub-login {
+
+.modal-login .modal-sub-login {
     position: absolute;
-    top: 50px;
-    right: 20%;
+    top: auto;
+    right: auto;
+    z-index: 99;
 }
-.modal-sub-login:after {
+
+.modal-login .modal-sub-login {
+    background-color: black;
+
+    border-radius: 0.25rem;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-login .modal-sub-login::after {
     content: '';
 
     width: 0;
@@ -139,34 +152,12 @@
     top: -9px;
     left: 20%;
 }
-.modal-menu-login {
-    height: 50px;
 
-    background: black;
-
-    border-radius: 0.25rem;
-    padding: 10px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.modal-sub-login button{
+.modal-login .modal-sub-login button{
     color: white;
     cursor: pointer;
 
-    border: none;
-    background: none;
-}
-.modal-sub-login a{
-    color: white;
-}
-
-@media (max-width: 1200px) {
-    .modal-sub-login {
-        top: auto;
-        right: auto;
-    }
+    background-color: inherit;
 }
 
 /*===========================

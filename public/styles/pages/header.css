@@ -89,8 +89,6 @@ header .nav-container-top .nav-main .nav-right .carrinho-de-Compra {
 }
 
 header .nav-container-top .nav-main .nav-right .carrinho-de-Compra .a-cart {
-    /* width: 30px; */
-
     display: flex;
     justify-content: center;
 }
