@@ -85,26 +85,30 @@
     top: 50%;
     right: 10%;
 
+    transition: transform 0.5s ease-in-out;
+
     display: none;
     cursor: pointer;
 }
 
 .menu::before, .menu::after {
     content: "";
-    width: inherit;
-    height: inherit;
+    width: clamp(30px, 6vw ,40px);
+    height: 5px;
 
     position: absolute;
 
-    background-color: inherit;
+    transition: transform 0.5s ease-in-out;
+
+    background-color: var(--white-grey);
 }
 
 .menu::before {
-    top: -10px;
+    transform: translateY(-10px);
 }
 
 .menu::after {
-    top: 10px;
+    transform: translateY(10px);
 }
 /********Fim Modal Header********/
 
@@ -166,23 +170,21 @@ Menu Header
 @media (max-width: 1200px) {
     .menu {
         display: flex;
-
-        transition: transform 1s linear;
     }  
     
     header .nav-container-top.on .menu {
         top: 10%;
         
-        transition: transform 1s linear;
-        transform: rotate(-45deg);
+        transform: translateX(-50px);
+        background-color: transparent;
     }
     
     header .nav-container-top.on .menu::before {
-        top: 0;
-        transform: rotate(-90deg);
+        transform: rotate(45deg) translate(35px, -35px);
     }
 
     header .nav-container-top.on .menu::after {
-        content: none;
+        /* background: transparent; */
+        transform: rotate(-45deg) translate(35px, 35px);
     }
 }
