@@ -22,8 +22,8 @@
     <%- include('parts/header') %> 
 
     <main>
-        <section>
-            <img class="carrossel" src="<%= banner %>" alt="mother">
+        <section class="carrossel">
+            <img class="carrossel" src="<%= banner %>" alt="banner">
         </section>
 
         <section>
@@ -31,17 +31,15 @@
                 <!--Ofertas de hoje-->
                 <div class="card-background">
                     <a href="/notebook?produto=1">
-                        <div class="">
-                            <div class="card-header">
-                                <h2 class="">Ofertas de hoje</h2>
-                            </div>
-                            <div class="card-body">
-                                <img id="img" src="/images/products/notebook-gamer.png" alt="notebook" width="200px" height="200px">
-                                <p id="price">R$7.368,32</p>
-                                <span class="desconto">
-                                    pagamento à vista tem desconto de 30%
-                                </span>
-                            </div>
+                        <div class="card-header">
+                            <h2 class="">Ofertas de hoje</h2>
+                        </div>
+                        <div class="card-body">
+                            <img id="img" class="images" src="/images/products/notebook-gamer.png" alt="notebook">
+                            <p id="price" class="prices">R$7.368,32</p>
+                            <span class="desconto">
+                                pagamento à vista tem desconto de 30%
+                            </span>
                         </div>
                     </a>
                 </div>
@@ -49,16 +47,14 @@
                 <!--Mais vendido-->
                 <div class="card-background">
                     <a href="/<%= vendido.departamento %>?produto=<%= vendido.id %>">
-                        <div class="">
-                            <div class="card-header">
-                                <h2 class="">Mais vendido</h2>
-                            </div>
-                            <div class="card-body">
-                                <img id="" src="<%= vendido.photo %>" alt="camisa" width="200px" height="200px">
-                                <p id="price"></p>
-                                <span class="desconto">
-                                </span>
-                            </div>
+                        <div class="card-header">
+                            <h2 class="">Mais vendido</h2>
+                        </div>
+                        <div class="card-body">
+                            <img class="images" src="<%= vendido.photo %>" alt="camisa">
+                            <p id="price" class="prices"></p>
+                            <span class="desconto">
+                            </span>
                         </div>
                     </a>
                 </div>
@@ -66,16 +62,14 @@
                 <!--Mais avaliado-->
                 <div class="card-background">
                     <a href="/<%= desejado.departamento %>?produto=<%= desejado.id %>">
-                        <div class="">
-                            <div class="card-header">
-                                <h2 class="">Mais avaliado</h2>
-                            </div>
-                            <div class="card-body">
-                                <img id="" src="<%= desejado.photo %>" alt="notebook" width="200px" height="200px">
-                                <p id="price"></p>
-                                <span class="desconto">
-                                </span>
-                            </div>
+                        <div class="card-header">
+                            <h2 class="">Mais avaliado</h2>
+                        </div>
+                        <div class="card-body">
+                            <img class="images" src="<%= desejado.photo %>" alt="notebook">
+                            <p id="price" class="prices"></p>
+                            <span class="desconto">
+                            </span>
                         </div>
                     </a>
                 </div>
@@ -85,14 +79,14 @@
 
         <section>
             <div class="card-background">
-                <div class="">
+                <div class="card-sub-background">
                     <div class="card-header">
                         <h2 class="">Jogos mais vendidos</h2>
                     </div>
-                    <div class="card-body">
-                        <img src="/images/products/ghost.jpg" alt="ghost" width="200px" height="200px">
-                        <img src="/images/products/call_of_duty.jpg" alt="callosduty" width="200px" height="200px">
-                        <img src="/images/products/the_last.jpg" alt="thelast" width="200px" height="200px">
+                    <div class="card-body games">
+                        <img class="images" src="/images/products/ghost.jpg" alt="ghost">
+                        <img class="images" src="/images/products/call_of_duty.jpg" alt="callosduty">
+                        <img class="images" src="/images/products/the_last.jpg" alt="thelast">
                         <p id="price"></p>
                         <span class="desconto">
                         </span>

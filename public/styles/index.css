@@ -4,60 +4,85 @@ body {
 
 
 /*MAIN===========================*/
-.carrossel {
-    width: 100vw;
+main .carrossel {
+    overflow: hidden;
 }
 
-.container-card {
-    width: 100vw;
+main .carrossel img {
+    width: 100%;
 
+    margin-bottom: 1rem;
+}
+
+main .container-card {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
 }
-.card-background {
-    background: white;
 
-    margin: 1rem;
+.card-background{
+    background-color: var(--white);
+
+    margin-bottom: 2rem;
+    padding: 1rem 0;
     border-radius: 0.5rem;
-    padding: 1rem;
 
     display: flex;
     justify-content: center;
 
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
+
+
 .card-header {
     display: flex;
     justify-content: center;
 
-    color: #007185;
+    color: var(--blue-light);
 
-    padding-bottom: 20px;
+    padding-bottom: 1rem;
 }
-#img {
+
+.card-sub-background {
+    width: 100%;
+}
+.card-sub-background .card-body.games {
+    display: flex;
+}
+
+.card-body.games .images {
+    display: initial;
+}
+
+.images{
+    width: 200px;
+    height: 200px;
+
     display: flex;
     margin: 0 auto;
 }
-#price {
-    color: #007185;
+
+.prices, .desconto {
+    color: var(--blue-light);
 }
-.desconto {
-    color: #007185;
-}
+
 /*=================================
 responsive
 =================================*/
-@media (min-width: 1920px){
-    .carrossel {
-        width: 1920px;
-    }
-    .container-card {
-        width: 1920px;
-    }
-}
+
 @media (max-width: 780px) {
-    .container-card {
+    main .container-card {
         display: flex;
         flex-flow: column;
+    }
+
+    .card-body.games .images {
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 695px){
+    .card-sub-background .card-body.games {
+        flex-direction: column;
     }
 }
