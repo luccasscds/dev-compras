@@ -1,16 +1,14 @@
 main {
-    background: #e5e5e5;
+    background-color: var(--white-grey);
 
     display: grid;
-    grid-template-columns: auto auto;
-
-    font-family: 'Montserrat', sans-serif;
+    grid-template-columns: repeat(2,auto);
 }
 
-
-.container-photos {
+/* ****Photos**** */
+main .cards .container-photos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .sub-container{

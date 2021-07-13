@@ -1,0 +1,64 @@
+/*FILTER NOTEBOOK*/
+.filter {
+    padding: 10px 10px 0 10px;
+    border-right: 1px solid var(--white);
+}
+
+.filter #marcas,
+.filter #price {
+    border-bottom: 1px solid var(--white);
+    margin: 10px 0;
+
+    color: var(--blue-light);
+}
+
+.filter #marcas .marcas-title, 
+.filter #price .price-title {
+    margin-bottom: 10px;
+}
+
+.filter #outros-filtros .so-title, 
+.filter #outros-filtros .cpu-title, 
+.filter #outros-filtros .ram-title, 
+.filter #outros-filtros .hd-title, 
+.filter #outros-filtros .tela-title {
+    color: var(--blue-light);
+}
+
+.filter #outros-filtros div #ul-SO, 
+.filter #outros-filtros div #ul-cpu, 
+.filter #outros-filtros div #ul-RAM, 
+.filter #outros-filtros div #ul-HD,
+.filter #outros-filtros div #ul-tela {
+    border-bottom: 1px solid var(--white);
+    margin: 10px 0;
+
+    color: var(--blue-light);
+}
+/*FIM FILTER NOTEBOOK*/
+
+
+/*FILTER CAMISA*/
+#cores {
+    border-bottom: 1px solid white;
+    margin: 10px 0;
+
+    color: #007185;
+}
+.cores-title {
+    margin: 0 0 10px 0;
+
+    color: #007185;
+}
+#tamanhos {
+    border-bottom: 1px solid white;
+    margin: 10px 0;
+
+    color: #007185;
+}
+.tamanhos-title {
+    margin: 0 0 10px 0;
+
+    color: #007185;
+}
+/*FIM FILTER CAMISA*/
