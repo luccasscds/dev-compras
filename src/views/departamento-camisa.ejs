@@ -9,12 +9,15 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <title>Dev compras: Camisa</title>
     
-    <link rel="stylesheet" href="styles/pages/all.css">
-    <link rel="stylesheet" href="styles/pages/filter.css">
-    <link rel="stylesheet" href="styles/pages/departamento-camisa.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/tools/filter.css">
+    <link rel="stylesheet" href="/styles/tools/products.css">
     
-    <script src="scripts/ferramentas/filtros.js" defer></script>
-    <script src="scripts/departamento-camisa.js" defer></script>
+    <!-- Scripts -->
+    <script src="/scripts/tools/filtros.js" defer></script>
+    <script src="/scripts/pages/departamento-camisa.js" defer></script>
+
 </head>
 
 <body>
@@ -24,8 +27,9 @@
         <!--filtro-->
         <section>
             <div class="filter">
-                <div id="marcas">
-                    <div class="marcas-title"><b>Marca</b></div>
+
+                <div id="marcas" class="filter-content">
+                    <div class="content-title">Marca</div>
                     <div class="">
                         <ul id="ul-marcas" onclick="filtroCamisa.marcas(event)">
                             <li id="li-nike">
@@ -58,8 +62,9 @@
                         </ul>
                     </div>
                 </div>
-                <div id="price">
-                    <div class="price-title"><b>Preço</b></div>
+
+                <div id="price" class="filter-content">
+                    <div class="content-title">Preço</div>
                     <div class="">
                         <ul id="ul-prices" onclick="filtroCamisa.prices(event)">
                             <li>
@@ -93,8 +98,9 @@
                         </ul>
                     </div>
                 </div>
-                <div id="cores">
-                    <div class="cores-title"><b>Cores</b></div>
+
+                <div id="cores" class="filter-content">
+                    <div class="content-title">Cores</div>
                     <div class="">
                         <ul id="ul-cores" onclick="filtroCamisa.cores(event)">
                             <li id="li-preto">
@@ -127,8 +133,9 @@
                         </ul>
                     </div>
                 </div>
-                <div id="tamanhos">
-                    <div class="tamanhos-title"><b>Tamanhos</b></div>
+
+                <div id="tamanhos" class="filter-content">
+                    <div class="content-title">Tamanhos</div>
                     <div class="">
                         <ul id="ul-tamanhos" onclick="filtroCamisa.tamanhos(event)">
                             <li id="li-PP">
@@ -179,27 +186,28 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
         <!--fim filtro-->
 
-        <section class="cards">
-            <div class="container-photos">
+        <section class="products">
+            <div class="container">
                 <% if(produtos[0]?.id) {%>
                     <% produtos.forEach( produto => {%>
-                        <div class="sub-container">
+                        <div class="product">
                             <a href="/<%= produto.departamento %>?produto=<%= produto.id %>">
-                                <div class="product">
+                                <div class="image">
                                     <img src="<%= produto.photo %>" alt="<%= produto.departamento %>">
                                 </div>
                             </a>
-                            <div class="description-product">
+                            <div class="description">
                                 <p><%= produto.nome %></p>
                             </div>
-                            <div class="share-product">
-                                <img src="images/icons/share.svg" alt="share icon" width="20px">
+                            <div class="share">
+                                <img src="images/icons/share.svg" alt="share icon">
                             </div>
-                            <div class="value-product">
+                            <div class="value">
                                 <p>R$ <%= produto.price.toFixed(2).replace('.',',') %></p>
                             </div>
                         </div>

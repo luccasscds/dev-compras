@@ -1,0 +1,88 @@
+html {
+    min-width: 375px;
+}
+
+main {
+    background-color: var(--white-grey);
+
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+/*==================================
+Container products
+====================================*/
+.products {
+    padding: 1rem;
+}
+
+.products .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.products .container .product {
+    background-color: var(--white);
+
+    padding: 10px;
+    border-radius: 0.5rem;
+
+    position: relative;
+}
+
+.products .container .product .image {
+    display: flex;
+    justify-content: center;
+}
+
+.products .container .product .image img {
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+.products .container .product .share img {
+    width: 20px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.products .container .product .description {
+    height: 100px;
+
+    text-align: justify;
+    
+    color: var(--blue-light);
+    
+    overflow: hidden;
+}
+
+.products .container .product .value {
+    padding-top: 10px;
+
+    color: var(--blue-light);
+}
+
+
+/*=================================
+responsive
+=================================*/
+@media (max-width: 830px) {
+    .products .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 466px) {
+    .products .container .product .share {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .products .container .product .share img {
+        position: static;
+    }
+}

@@ -10,21 +10,25 @@
     <title>Dev compras: Notebook</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/pages/departamento-notebook.css">
-    <link rel="stylesheet" href="styles/pages/filter.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/tools/products.css">
+    <link rel="stylesheet" href="/styles/tools/filter.css">
 
-    <script src="scripts/ferramentas/filtros.js" defer></script>
+    <!-- Scripts -->
+    <script src="/scripts/tools/filtros.js" defer></script>
+
 </head>
 <body>
+    
     <%- include('parts/header') %>
 
     <main>
         <!--filtro-->
         <section class="filter">
             <div class="">
-                <div id="marcas">
-                    <div class="marcas-title"><b>Marca</b></div>
+
+                <div id="marcas" class="filter-content">
+                    <div class="content-title">Marca</div>
                     <div class="">
                         <ul id="ul-marcas" onclick="filtroNotebook.marcas(event)">
                             <% produtos.forEach( produto => {%>
@@ -40,8 +44,9 @@
                         </ul>
                     </div>
                 </div>
-                <div id="price">
-                    <div class="price-title"><b>Preço</b></div>
+
+                <div id="price" class="filter-content">
+                    <div class="content-title">Preço</div>
                     <div class="">
                         <ul id="ul-prices" onclick="filtroNotebook.prices(event)">
                             <li>
@@ -82,8 +87,9 @@
                         </ul>
                     </div>
                 </div>
-                <div id="outros-filtros">
-                    <div class="so-title"><b>Sistema Operacional</b></div>
+
+                <div class="filter-content">
+                    <div class="content-title">Sistema Operacional</div>
                     <div class="">
                         <ul id="ul-SO" onclick="filtroNotebook.SOs(event)">
                             <% produtos.forEach( (produto, index) => { index++%>
@@ -97,7 +103,10 @@
                             <%})%>
                         </ul>
                     </div>
-                    <div class="cpu-title"><b>tipo de CPU</b></div>
+                </div>
+
+                <div class="filter-content">
+                    <div class="content-title">tipo de CPU</div>
                     <div class="">
                         <ul id="ul-cpu" onclick="filtroNotebook.CPUs(event)">
                             <%produtos.filter((produto, index, array) => {%>
@@ -114,7 +123,10 @@
                             <%})%>
                         </ul>
                     </div>
-                    <div class="ram-title"><b>Capacidade de RAM</b></div>
+                </div>
+
+                <div class="filter-content">
+                    <div class="content-title">Capacidade de RAM</div>
                     <div class="">
                         <ul id="ul-RAM" onclick="filtroNotebook.RAMs(event)">
                             <li>
@@ -154,7 +166,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="hd-title"><b>Capacidade do HD</b></div>
+                </div>
+
+                <div class="filter-content">
+                    <div class="content-title">Capacidade do HD</div>
                     <div class="">
                         <ul id="ul-HD" onclick="filtroNotebook.HDs(event)">
                             <li>
@@ -187,7 +202,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tela-title"><b>Tamanho da tela</b></div>
+                </div>
+
+                <div class="filter-content">
+                    <div class="content-title">Tamanho da tela</div>
                     <div class="">
                         <ul id="ul-tela" onclick="filtroNotebook.telas(event)">
                             <li>
@@ -221,27 +239,28 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
         <!--fim filtro-->
 
-        <section class="cards">
-            <div class="container-photos">
+        <section class="products">
+            <div class="container">
                 <% if(produtos[0]?.id) {%>
                     <% produtos.forEach( produto => {%>
-                        <div class="sub-container">
+                        <div class="product">
                             <a href="/<%= produto.departamento %>?produto=<%= produto.id %> ">
-                                <div class="product">
+                                <div class="image">
                                     <img src="<%= produto.photo %>" alt="<%= produto.departamento %>">
                                 </div>
                             </a>
-                            <div class="description-product">
+                            <div class="description">
                                 <p><%= produto.nome %></p>
                             </div>
-                            <div class="share-product">
-                                <img src="images/icons/share.svg" alt="share icon" width="20px">
+                            <div class="share">
+                                <img src="/images/icons/share.svg" alt="share icon">
                             </div>
-                            <div class="value-product">
+                            <div class="value">
                                 <p>R$ <%= produto.price.toFixed(2).replace('.',',') %></p>
                             </div>
                         </div>
