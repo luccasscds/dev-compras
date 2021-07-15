@@ -40,7 +40,7 @@
                             <div class="item-product">
                                 <div class="product-left">
                                     <div class="item-left">
-                                        <img src="<%= produto.photo %>" alt="<%= produto.id %>" width="200px" height="200px">
+                                        <img src="<%= produto.photo %>" alt="<%= produto.id %>">
                                     </div>
                                     <div class="item-center">
                                         <div id="nome"><%= produto.nome %></div>
@@ -56,7 +56,7 @@
                                         <%}%> 
     
                                         <div class="buttons">
-                                            <form id="qnt-<%= produto.id %>" class="form-quantidade <%= produto.id %>" action="/add_produto" method="post">
+                                            <form id="qnt-<%= produto.id %>" class="hidden-input <%= produto.id %>" action="/add_produto" method="post">
                                                 <input type="text" name="IDproduto" id="IDproduto" value="<%= produto.id %>">
                                                 <input type="text" name="tamanho" id="tamanho" value="<%= produto?.tamanho %>">
                                                 <input type="number" name="quantidade" id="quantidade" value="<%= produto.quantidade %>">
@@ -67,19 +67,19 @@
                                             </div>
 
                                             <button class="delete-button" form="delete-produto<%= produto.id %>" type="submit">
-                                                <img src="images/icons/lixeira.svg" alt="lixeira" width="20px">
+                                                <img src="images/icons/lixeira.svg" alt="lixeira">
                                             </button>
                                         </div>
                                         
                                         <form id="delete-produto<%= produto.id %>" action="/del_produto" method="post">
-                                            <input class="input-delete" type="text" name="id" value="<%= produto.id %>">
+                                            <input class="hidden-input" type="text" name="id" value="<%= produto.id %>">
                                         </form>
     
                                     </div>
                                 </div>
                                 <div class="product-right">
                                     <div class="item-right">
-                                        <div id="price">R$ <%= produto.price.toString().replace('.',',') %></div>
+                                        <div class="price">R$ <%= produto.price.toString().replace('.',',') %></div>
                                     </div>
                                 </div>
                             </div>
