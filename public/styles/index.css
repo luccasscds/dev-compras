@@ -46,6 +46,11 @@ main .container-card {
 .card-sub-background {
     width: 100%;
 }
+
+.card-body {
+    margin: 0 1rem;
+}
+
 .card-sub-background .card-body.games {
     display: flex;
 }
@@ -56,7 +61,6 @@ main .container-card {
 
 .images{
     width: 200px;
-    height: 200px;
 
     display: flex;
     margin: 0 auto;
