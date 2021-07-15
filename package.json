@@ -1,5 +1,5 @@
 {
-  "name": "siteRoupa",
+  "name": "Dev.compras",
   "version": "1.0.0",
   "description": "luccass",
   "main": "index.js",
@@ -17,6 +17,6 @@
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.12"
   }
 }

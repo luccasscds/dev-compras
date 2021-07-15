@@ -11,7 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/pages/notebook.css">
+    <link rel="stylesheet" href="/styles/tools/product.css">
     <link rel="stylesheet" href="/styles/tools/modal.css">
     
     <!-- Scripts -->
@@ -27,12 +27,12 @@
     <main>
         <section>
             <div class="background-card">
-                <div id="info-card">
+                <div class="info-card">
                     <div class="display-left">
-                        <img id="foto-produto" src="<%= produto.photo %>" alt="<%= produto.nome %> " width="400px">
+                        <img id="foto-produto" src="<%= produto.photo %>" alt="<%= produto.nome %>">
                     </div>
                     <div class="display-center">
-                        <p id="nome"><%= produto.nome %></p>
+                        <p class="name"><%= produto.nome %></p>
                         <p>Marca: <%= produto.marca %></p>
                         <div class="star">
                             <!--MEDIA-->
@@ -41,15 +41,15 @@
                                 <% let media = soma / (avaliacao.s1 + avaliacao.s2 + avaliacao.s3 + avaliacao.s4 + avaliacao.s5) %>
                                 <% media = media.toFixed(1) %>
                             <!--FIM MEDIA-->
-                            <div><img id="star1" src="/images/icons/star0.svg" alt="star" width="20px"></div>
-                            <div><img id="star2" src="/images/icons/star0.svg" alt="star" width="20px"></div>
-                            <div><img id="star3" src="/images/icons/star0.svg" alt="star" width="20px"></div>
-                            <div><img id="star4" src="/images/icons/star0.svg" alt="star" width="20px"></div>
-                            <div><img id="star5" src="/images/icons/star0.svg" alt="star" width="20px"></div>
+                            <div><img id="star1" src="/images/icons/star0.svg" alt="star"></div>
+                            <div><img id="star2" src="/images/icons/star0.svg" alt="star"></div>
+                            <div><img id="star3" src="/images/icons/star0.svg" alt="star"></div>
+                            <div><img id="star4" src="/images/icons/star0.svg" alt="star"></div>
+                            <div><img id="star5" src="/images/icons/star0.svg" alt="star"></div>
                             <div id="mediaStar"><%= media %></div>
                         </div>
                         <div class="price">
-                            <small>Por:</small> <span id="price">R$ <%= produto.price.toFixed(2).replace('.',',') %></span>
+                            <small>Por:</small> <span>R$ <%= produto.price.toFixed(2).replace('.',',') %></span>
                         </div>
 
                         <% let parcelas = produto.price / 10 %>
@@ -77,7 +77,7 @@
                         <%}%>
 
                         <form id="form-produto" action="/add_produto" method="post">
-                            <input type="text" name="IDproduto" id="IDproduto" value="">
+                            <input type="text" name="IDproduto" id="IDproduto" class="hidden-input" value="">
                             <label for="quantidade">Quantidade:</label>
                             <input id="quantidade" name="quantidade" type="number" min="1" value="1" onkeyup="addCarrinhoDeCompra.verificarinput()">
                         </form>
@@ -86,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="description-background">
+            <div class="description-card">
                 <h3>Descrição do produto</h3>
                 <p id="description"><%= produto.description %></p>
             </div>

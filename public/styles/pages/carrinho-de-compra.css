@@ -1,9 +1,8 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-
-    background: #f2f2f2;
-    color: #007185;
+    background-color: var(--white-light);
+    color: var(--blue-light);
 }
+
 .shopping-cart{
     display: grid;
     grid-template-columns: auto auto;

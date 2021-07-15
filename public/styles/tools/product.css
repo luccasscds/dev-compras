@@ -1,0 +1,182 @@
+main {
+    background-color: var(--white-grey);
+}
+
+.background-card {
+    padding: 1rem;
+}
+
+.background-card .info-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 0 10px;
+
+    color: var(--blue-light);
+
+    border-bottom: 1px solid var(--white);
+}
+
+.background-card .info-card .display-left img {
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+}
+
+.background-card .info-card .display-center .name {
+    font-size: larger;
+    font-weight: bold;
+
+    padding-bottom: 10px;
+}
+
+.background-card .info-card .display-center .star{
+    display: flex;
+
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+
+.background-card .info-card .display-center .star img{
+    width: 20px;
+}
+.background-card .info-card .price {
+    padding-top: 20px;
+
+    color: var(--red);
+}
+
+.background-card .info-card .price span {
+    font-weight: bold;
+}
+
+/* ===============================
+Camisa
+================================== */
+.background-card .info-card .display-center .color,
+.background-card .info-card .display-center .tamanhos  {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.background-card .info-card .display-center .color > span {
+    font-weight: normal;
+}
+
+.background-card .info-card .display-center .tamanhos .button-tamanho.deactive,
+.background-card .info-card .display-center .tamanhos .button-tamanho.active {
+    color: var(--blue-light);
+    
+    border-radius: 2.5rem;
+    width: 30px;
+    height: 30px;
+}
+
+.background-card .info-card .display-center .tamanhos .button-tamanho.deactive {
+    background-color: var(--grey-black);
+    cursor: not-allowed;
+}
+
+.background-card .info-card .display-center .tamanhos .button-tamanho.active{
+    background-color: var(--grey-grey);
+    cursor: pointer;
+}
+/* ===============================
+Fim Camisa
+================================== */
+
+.background-card .info-card .display-center .info {
+    border-top: 1px solid var(--white);
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.background-card .info-card .display-right {
+    border: 1px solid (--white);
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-card .info-card .display-right .estoque.on {
+    color: var(--green);
+
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.background-card .info-card .display-right .estoque.off {
+    color: var(--red);
+
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.background-card .info-card .display-right #quantidade {
+    width: 30px;
+    height: 20px;
+
+    color: var(--blue-light);
+
+    border-radius: 0.25rem;
+
+    text-align: center;
+}
+
+#input-carrinho {
+    background-color: var(--blue-light);
+    color: var(--white);
+
+    border-radius: 0.25rem;
+    margin: 10px 0;
+    padding: 0.7rem 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.description-card {
+    color: var(--blue-light);
+
+    padding: 1rem;
+}
+
+#a-avaliacao {
+    color: var(--blue-light);
+
+    padding-left: 1rem;
+
+    text-decoration: revert;
+}
+
+/*=================================
+responsive
+=================================*/
+@media (max-width: 900px) {
+    .background-card .info-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .background-card .info-card .display-left {
+        overflow: hidden;
+    }
+    
+    .background-card .info-card .display-left img {
+        position: static;
+        width: 100vw;
+    }
+
+    .background-card .info-card .display-right {
+        display: block;
+    }
+}

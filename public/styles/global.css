@@ -7,10 +7,15 @@
 }
 html {
     --white: white;
+    --white-light: #f2f2f2;
     --white-grey: #e5e5e5;
+    --grey-grey: #dedcd7;
+    --grey-black: #a09e98;
     --blue: #14213d;
     --blue-dark: #0a1a3b;
     --blue-light: #007185;
+    --red: #e76f51;
+    --green: #2b9348;
 }
 
 a {
