@@ -7,70 +7,73 @@
     top: 0;
     left: 0;
     
-    background: rgba(0, 0, 0, 0.8);
+    background-color: var(--grey-black);
     
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    opacity: 1;
-    visibility: visible;
 }
-.sub-container-background {
+
+.container-background .sub-container-background {
     width: 600px;
     height: 200px;
 
-    background: #e5e5e5;
-    color: #007185;
+    background-color: var(--white-grey);
+    color: var(--blue-light);
     
     border-radius: 0.5rem;
-
-    display: block;
 }
-.cep-title {
+
+.container-background .sub-container-background .cep .cep-title {
     display: flex;
     justify-content: center;
 
     margin: 20px 0 10px 0;
 
     font-weight: bold;
-    font-size: 2rem;
+    font-size: clamp(1rem, 3vw, 2rem);
 }
-.sub-title {
+
+.container-background .sub-container-background .cep .sub-title {
     display: flex;
     justify-content: center;
 }
-.add-cep {
+
+.container-background .sub-container-background .cep .add-cep {
     display: flex;
     justify-content: center;
 }
-#cep {
+
+.container-background .sub-container-background .cep .add-cep #cep {
     height: 20px;
 
-    border: none;
     border-radius: 0.25rem;
 
-    color: #007185;
+    color: var(--blue-light);
 }
-#erroMessage{
+
+.container-background .sub-container-background .cep .add-cep #erroMessage{
     color: red;
 }
-.form-2 {
+
+.hidden {
     display: none;
 }
-.corfim-cep {
+
+.container-background .sub-container-background .cep .corfim-cep {
     display: flex;
     justify-content: center;
 }
-#submit-cep {
+
+.container-background .sub-container-background .cep .corfim-cep #submit-cep {
     width: 70px;
     height: 30px;
 
-    background: #2b9348;
-    color: white;
+    background: var(--green);
+    color: var(--white);
 
-    border: none;
     border-radius: 0.25rem;
+    margin: 1rem 0;
 }
 /*FIM MODAL CEP*/
 
