@@ -1,87 +1,127 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    
-    background: #e5e5e5;
+body {    
+    background-color: var(--white-grey);
 }
+
 .login-background {
     height: 100vh;
 
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2,auto);
 }
-.title-login {
+
+.login-background .display-login {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.title-text{
-    color: #007185;
+
+.login-background .display-login .title-text{
+    color: var(--blue-light);
 
     font-size: 2rem;
     font-weight: bold;
 }
-.login-subbackground {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.login-main {
+
+.login-background .display-login .login-main {
     width: 500px;
     height: 400px;
 
-    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white);
 
     border-radius: 0.5rem;
 }
-.login-sub-main {
-    height: 100%;
-    
-    margin: 50px 0 0 0;
-}
-#form-login {
+
+.login-background .display-login .login-main #form-login {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .inputs {
     width: 300px;
     height: 40px;
 
-    border: none;
     border-radius: 0.25rem;
     margin: 5px 0;
-    padding: 0 0 0 20px;
+    padding-left: 1rem;
 
-    background: #e5e5e5;
-    color: #007185;
+    background-color: var(--white-grey);
+    color: var(--blue-light);
     font-weight: bold;
     font-size: 1rem;
 }
-#mensagem {
-    color: #e76f51;
-}
-.submit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    margin: 20px 0 0 0;
+#mensagem {
+    color: var(--red);
 }
-#input-submit {
+
+.login-background .display-login .login-main .submit {
+    margin-top: 20px;
+}
+
+.login-background .display-login .login-main .submit #input-submit {
     width: 320px;
-    background: #007185;
-    color: #e5e5e5;
+    
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--blue-light);
+    color: var(--white-grey);
 }
+
 .login-registrar {
-    color: #007185;
+    color: var(--blue-light);
 
     margin: 20px 0;
     display: flex;
     justify-content: center;
 }
-a {
-    color: #007185;
+
+.login-background .display-login .login-main .login-registrar a {
+    color: var(--blue-light);
     text-decoration: underline;
 
-    margin: 0 0 0 5px;
+    margin-left: 5px;
+}
+
+
+/*=================================
+responsive
+=================================*/
+@media (max-width: 880px) {
+    .login-background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-background .display-login {
+        padding: 10px 0;
+    }
+
+    .login-background .display-login .login-main {
+        width: auto;
+        height: auto;
+
+        padding: 1rem;
+    }
+
+    .inputs {
+        width: auto;
+    }
+
+    .login-background .display-login .login-main .submit {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-background .display-login .login-main .submit #input-submit {
+        width: auto;
+
+        padding: 10px 20px;
+    }
 }
