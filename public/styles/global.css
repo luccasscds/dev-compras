@@ -31,3 +31,7 @@ header,
 footer {
     background-color: var(--blue);
 }
+
+.hidden {
+    display: none;
+}

@@ -58,10 +58,12 @@ const cep = {
     },
 
     addErroMessage() {
-        document.querySelector('#erroMessage').innerHTML = 'cep inválido';
+        document.querySelector('#erroMessage').innerHTML = 'Cep inválido';
     },
 
     removeErroMessage() {
         document.querySelector('#erroMessage').innerHTML = '';
     }
 }
+
+cep.removesubmit();

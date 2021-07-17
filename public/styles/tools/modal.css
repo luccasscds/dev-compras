@@ -56,10 +56,6 @@
     color: red;
 }
 
-.hidden {
-    display: none;
-}
-
 .container-background .sub-container-background .cep .corfim-cep {
     display: flex;
     justify-content: center;
@@ -187,7 +183,6 @@ Menu Header
     }
 
     header .nav-container-top.on .menu::after {
-        /* background: transparent; */
         transform: rotate(-45deg) translate(35px, 35px);
     }
 }
