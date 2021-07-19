@@ -229,7 +229,7 @@ const initDb = {
             0,
             5,
             5999,
-            '{"s1":4, "s2":1, "s3":2, "s4":8, "s5":9}'
+            '{"s1":0, "s2":1, "s3":1, "s4":9, "s5":12}'
         )`)
         await db.run(`INSERT INTO usuarios (
             email,
