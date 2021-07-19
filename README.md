@@ -7,7 +7,10 @@
     <a href="#-dowloand">Dowloand</a>&nbsp;&nbsp;&nbsp;
 </p>
 
-<img src="https://github.com/luccasscds/dev-compras/blob/main/.github/dev-compras.png?raw=true">
+<!-- <img src="./.github/dev-compras.png"> -->
+<video width="100%" autoplay loop muted>
+    <source src="./.github/dev-compras.mp4">
+</video>
 
 ## 🚀 Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
