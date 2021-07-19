@@ -12,6 +12,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - EJS
 - SQlite
 
+## 💻 Projeto
+Dev compras é uma aplicação que simula compras de produtos ,sendo possível pesquisar , visualizar e adicionar o produto no carrinho de compras.
+
 ## 🔖 Layout
 No momento não está disponível.
 
