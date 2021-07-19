@@ -27,6 +27,10 @@ input {
     outline: none;
 }
 
+li {
+    list-style: none;
+}
+
 header,
 footer {
     background-color: var(--blue);
