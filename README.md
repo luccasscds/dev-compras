@@ -1,5 +1,12 @@
 # 🛒 Dev.Compras
 
+<p align="center">
+    <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-dowloand">Dowloand</a>&nbsp;&nbsp;&nbsp;
+</p>
+
 <img src="https://github.com/luccasscds/dev-compras/blob/main/.github/dev-compras.png?raw=true">
 
 ## 🚀 Tecnologias
