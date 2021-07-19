@@ -7,10 +7,7 @@
     <a href="#-dowloand">Dowloand</a>&nbsp;&nbsp;&nbsp;
 </p>
 
-<!-- <img src="./.github/dev-compras.png"> -->
-<video width="100%" autoplay loop muted>
-    <source src="./.github/dev-compras.mp4">
-</video>
+<img src="./.github/dev-compras.png">
 
 ## 🚀 Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
