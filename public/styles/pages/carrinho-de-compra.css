@@ -3,6 +3,19 @@ body {
     color: var(--blue-light);
 }
 
+#car img{
+    width: 100%;
+}
+
+#car p {
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: bold;
+
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
 .shopping-cart{
     display: grid;
     grid-template-columns: auto auto;
