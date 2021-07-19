@@ -12,10 +12,3 @@ const CarrinhoDeCompra = {
         document.querySelector(`#somarOUsubtrair-${tagForm}`).value = -1;
     }
 }
-
-const appCarrinhoDeCompras = {
-    init() {
-
-    }
-}
-appCarrinhoDeCompras.init();

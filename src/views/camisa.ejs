@@ -105,10 +105,11 @@
                         <form id="form-produto" action="/add_produto" method="post">
                             <input type="text" name="IDproduto" id="IDproduto" class="hidden-input" value="<%= produto.id %>">
                             <input type="text" name="tamanho" id="tamanho" class="hidden-input" value="">
+                            
                             <label for="quantidade">Quantidade: </label>
                             <input id="quantidade" name="quantidade" type="number" min="1" value="1" onkeyup="addCarrinhoDeCompra.verificarinput()">
                         </form>
-                        <button id="input-carrinho" form="form-produto" type="submit" onclick="addCarrinhoDeCompra.add()">Adicionar ao carrinho</button>
+                        <button id="input-carrinho" form="form-produto" type="submit" onclick="addCarrinhoDeCompra.addTamanho()">Adicionar ao carrinho</button>
                     </div>
                 </div>
             </div>

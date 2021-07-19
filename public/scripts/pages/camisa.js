@@ -30,7 +30,7 @@ const addCarrinhoDeCompra = {
         document.querySelector('#input-carrinho').setAttribute('type','button');
     },
     active(){
-        document.querySelector('#input-carrinho').setAttribute('onclick','addCarrinhoDeCompra.add()');
+        document.querySelector('#input-carrinho').setAttribute('onclick','addCarrinhoDeCompra.addTamanho()');
         document.querySelector('#input-carrinho').setAttribute('type','submit');
     }
 }
