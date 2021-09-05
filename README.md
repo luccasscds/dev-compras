@@ -23,7 +23,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Dev compras é uma aplicação que simula compras de produtos ,sendo possível pesquisar , visualizar e adicionar o produto no carrinho de compras.
 
 ## 🔖 Layout
-No momento não está disponível.
+Você pode ver o projeto através desse [link](https://dev-compras.herokuapp.com).
 
 ## 📥 Dowloand
 Outa opção para visualizar o projeto é baixando o projeto. Veja o passo a passo:
