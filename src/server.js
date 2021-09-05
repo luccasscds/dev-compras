@@ -19,4 +19,4 @@ server.use(express.urlencoded({extended: true}))
 //chamando as routes
 server.use(routes)
 
-server.listen(3000, () => console.log('rodando'))
+server.listen(process.env.PORT || 3000)
